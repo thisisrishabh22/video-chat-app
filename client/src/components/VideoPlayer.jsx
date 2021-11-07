@@ -32,7 +32,6 @@ const VideoPlayer = () => {
         userVideo,
         stream,
         name,
-        answerCall,
     } = useContext(SocketContext);
     const classes = useStyles();
     return (
