@@ -4,5 +4,10 @@
   "description": "video chat app server",
   "main": "index.js",
   "author": "Rishabh Singh",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "socket.io": "^4.3.1"
+  }
 }
