@@ -1,0 +1,8 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "video chat app server",
+  "main": "index.js",
+  "author": "Rishabh Singh",
+  "license": "ISC"
+}
