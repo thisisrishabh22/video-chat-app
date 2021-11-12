@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Options = (props) => {
-  const { callAccepted, callEnded, name, setName, me, callUser, leaveCall } =
+  const { setVideoOn, videoOn, callAccepted, callEnded, name, setName, me, callUser, leaveCall } =
     useContext(SocketContext);
 
   const [idToCall, setIdToCall] = useState("");
@@ -56,6 +56,7 @@ const Options = (props) => {
         <form className={classes.root} noValidate autoComplete="off">
           <Grid container className={classes.gridContainer}>
             <Grid item xs={12} md={6} className={classes.padding}>
+              <p onClick={() => setVideoOn(!videoOn)}>Video Off</p>
               <Typography gutterBottom variant="h6">
                 Account Info
               </Typography>
@@ -64,6 +65,7 @@ const Options = (props) => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 fullWidth
+                style={{ marginBottom: 20 }}
               />
               <CopyToClipboard text={me} className={classes.margin}>
                 <Button
@@ -85,6 +87,7 @@ const Options = (props) => {
                 value={idToCall}
                 onChange={(e) => setIdToCall(e.target.value)}
                 fullWidth
+                style={{ marginBottom: 20 }}
               />
               {callAccepted && !callEnded ? (
                 <Button

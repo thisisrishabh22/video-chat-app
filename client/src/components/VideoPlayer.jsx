@@ -62,8 +62,8 @@ const VideoPlayer = () => {
                     <Paper className={classes.paper}>
                         <Grid item xs={12} md={6}>
                             <Typography variant="h5" gutterBottom>
-                                Name
-          </Typography>
+                                {call.name || 'Name'}
+                            </Typography>
                             <video
                                 playsInline
                                 muted
